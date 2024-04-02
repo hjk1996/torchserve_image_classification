@@ -2,6 +2,7 @@ FROM pytorch/pytorch:latest
 RUN pip install torchserve torch-model-archiver
 WORKDIR /workspace
 ADD model_trace.py .
+ADD sample.jpg .
 RUN python3 model_trace.py
 RUN torch-model-archiver --model-name resnet18 \
                          --version 1.0 \ 
