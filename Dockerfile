@@ -1,4 +1,4 @@
-FROM pytorch:latest
+FROM pytorch/pytorch:latest
 RUN pip install torchserve torch-model-archiver
 WORKDIR /workspace
 ADD model_trace.py .
