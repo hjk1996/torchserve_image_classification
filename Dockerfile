@@ -7,6 +7,6 @@ RUN torch-model-archiver --model-name resnet18 \
                          --version 1.0 \ 
                          --serialized-file scripted_model.pt \
                          --handler image_classifier \
-                        --export-path . \
-                        -f 
+                         --export-path . \
+                         -f 
 CMD ["torchserve", "--start", "--ncs", "--model-store", ".", "--models", "resnet18.mar"]
