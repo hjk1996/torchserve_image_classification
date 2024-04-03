@@ -1,6 +1,7 @@
 
 
 
-output "pubsub_cidr" {
-  value = aws_subnet.public.cidr_block
+output "resnet_registry_url" {
+
+  value = aws_ecr_repository.resnet18.repository_url
 }

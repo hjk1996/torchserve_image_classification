@@ -15,4 +15,5 @@ RUN torch-model-archiver --model-name resnet18 \
 FROM pytorch/torchserve:latest
 WORKDIR /workspace
 COPY --from=model_builder /workspace/resnet18.mar .
+EXPOSE 8080
 CMD ["torchserve", "--start", "--ncs", "--model-store", ".", "--models", "resnet18.mar"]
